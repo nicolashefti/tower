@@ -4,7 +4,8 @@ require '../vendor/autoload.php';
 
 use Symfony\Component\DomCrawler\Crawler;
 
-$html = file_get_contents('http://www.2ememain.be/marche/2/dahon/');
+$url = $_GET['url'];
+$html = file_get_contents($url);
 $crawler = new Crawler($html);
 
 
